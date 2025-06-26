@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class PiedraPapelTijeraAND {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Jugador 1 - Ingrese su jugada (0: piedra, 1: papel, 2: tijera): ");
+        int jugador1 = entrada.nextInt();
+
+        System.out.print("Jugador 2 - Ingrese su jugada (0: piedra, 1: papel, 2: tijera): ");
+        int jugador2 = entrada.nextInt();
+
+        if ((jugador1 >= 0 && jugador1 <= 2) && (jugador2 >= 0 && jugador2 <= 2)) {
+
+            if (jugador1 == jugador2) {
+                System.out.println("Empate");
+            }
+
+            if (
+                (jugador1 == 0 && jugador2 != 0 && jugador2 != 1) &&  // piedra vs tijera
+                (jugador2 != 0 && jugador2 != 1 && jugador2 == 2)     // redundante pero sin OR
+            ) {
+                System.out.println("Jugador 1 gana");
+            }
+
+            if (
+                (jugador1 == 1 && jugador2 != 1 && jugador2 != 2) &&
+                (jugador2 != 1 && jugador2 != 2 && jugador2 == 0)
+            ) {
+                System.out.println("Jugador 1 gana");
+            }
+
+            if (
+                (jugador1 == 2 && jugador2 != 2 && jugador2 != 0) &&
+                (jugador2 != 2 && jugador2 != 0 && jugador2 == 1)
+            ) {
+                System.out.println("Jugador 1 gana");
+            }
+
+            if (
+                (jugador1 != jugador2) &&
+                !((jugador1 == 0 && jugador2 == 2) ||
+                  (jugador1 == 1 && jugador2 == 0) ||
+                  (jugador1 == 2 && jugador2 == 1))
+            ) {
+                System.out.println("Jugador 2 gana");
+            }
+
+        } else {
+            System.out.println("Entrada inválida. Debe ser 0, 1 o 2.");
+        }
+
+        entrada.close();
+    }
+}

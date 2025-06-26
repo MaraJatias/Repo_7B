@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class NivelEscolar {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Ingrese el número de curso (0 a 12): ");
+        int curso = entrada.nextInt();
+
+        if (curso == 0) {
+            System.out.println("jardín de infantes");
+        } else if (curso >= 1 && curso <= 6) {
+            System.out.println("primaria");
+        } else if (curso >= 7 && curso <= 12) {
+            System.out.println("secundaria");
+        } else {
+            System.out.println("Curso inválido.");
+        }
+
+        entrada.close();
+    }
+}

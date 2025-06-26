@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class MayorDeTres {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Ingrese el primer número (a): ");
+        int a = entrada.nextInt();
+
+        System.out.print("Ingrese el segundo número (b): ");
+        int b = entrada.nextInt();
+
+        System.out.print("Ingrese el tercer número (c): ");
+        int c = entrada.nextInt();
+
+        int mayor;
+
+        if (a >= b && a >= c) {
+            mayor = a;
+        } else if (b >= a && b >= c) {
+            mayor = b;
+        } else {
+            mayor = c;
+        }
+
+        System.out.println("El mayor número es: " + mayor);
+
+        entrada.close();
+    }
+}
