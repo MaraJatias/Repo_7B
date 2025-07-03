@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class DiasDelMes {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingresa el nombre del mes: ");
+        String mes = scanner.nextLine().toLowerCase();
+
+        switch (mes) {
+            case "enero":
+            case "marzo":
+            case "mayo":
+            case "julio":
+            case "agosto":
+            case "octubre":
+            case "diciembre":
+                System.out.println("El mes de " + mes + " tiene 31 días.");
+                break;
+
+            case "abril":
+            case "junio":
+            case "septiembre":
+            case "noviembre":
+                System.out.println("El mes de " + mes + " tiene 30 días.");
+                break;
+
+            case "febrero":
+                System.out.println("El mes de " + mes + " tiene 28 días (29 si es año bisiesto).");
+                break;
+
+            default:
+                System.out.println("Mes no válido. Asegúrate de escribir el nombre correctamente.");
+        }
+    }
+}

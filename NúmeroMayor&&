@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class MayorDeTres {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingresa el primer número: ");
+        int a = scanner.nextInt();
+
+        System.out.print("Ingresa el segundo número: ");
+        int b = scanner.nextInt();
+
+        System.out.print("Ingresa el tercer número: ");
+        int c = scanner.nextInt();
+
+        if (a > b && a > c) {
+            System.out.println("El número mayor es: " + a);
+        } else if (b > a && b > c) {
+            System.out.println("El número mayor es: " + b);
+        } else if (c > a && c > b) {
+            System.out.println("El número mayor es: " + c);
+        } else {
+            System.out.println("Hay dos o más números iguales que son los mayores.");
+        }
+
+        scanner.close();
+    }
+}

@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class AutoCaracteristicas {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese la clase del auto (a, b, c): ");
+        char clase = scanner.next().toLowerCase().charAt(0);
+
+        switch (clase) {
+            case 'a':
+                System.out.println("Clase A:");
+                System.out.println("- 4 ruedas");
+                System.out.println("- Motor");
+                break;
+
+            case 'b':
+                System.out.println("Clase B:");
+                System.out.println("- 4 ruedas");
+                System.out.println("- Motor");
+                System.out.println("- Cierre centralizado");
+                System.out.println("- Aire acondicionado");
+                break;
+
+            case 'c':
+                System.out.println("Clase C:");
+                System.out.println("- 4 ruedas");
+                System.out.println("- Motor");
+                System.out.println("- Cierre centralizado");
+                System.out.println("- Aire acondicionado");
+                System.out.println("- Airbag");
+                break;
+
+            default:
+                System.out.println("Clase inválida. Por favor ingrese 'a', 'b' o 'c'.");
+        }
+
+        scanner.close();
+    }
+}
